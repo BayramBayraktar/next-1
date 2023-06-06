@@ -1,0 +1,38 @@
+.wrapper {
+    background-color: var(--backgroun-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    top: 5rem;
+    padding: 3rem;
+    border-radius: 26px;
+    box-shadow: 0 12px 56px var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1rem solid var(--pink);
+}
+
+.title {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.email {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.container a {
+    border: 0.1rem solid var(--pink);
+    border-radius: 1rem;
+    background: transparent;
+    color: var(--text-color);
+    padding: 0.7rem 2rem;
+    margin-top: 1rem;
+}

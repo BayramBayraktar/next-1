@@ -1,0 +1,19 @@
+.wrapper {
+    padding-top: 70px;
+    background-color: var(--backgroun-color);
+    color: var(--text-color);
+    height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.Current {
+    color: var(--text-color);
+    font-size: clamp(0rem, 3vw, 1rem);
+}

@@ -1,0 +1,54 @@
+.wrapper {
+    width: 100%;
+    z-index: 10;
+    padding: 0 15px;
+    backdrop-filter: blur(0.2rem);
+    display: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.header .logo {
+    display: flex;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo .logo_text {
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+
+.header .logo svg {
+    max-width: 33px;
+    height: auto;
+    background-color: var(--text-color);
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.header .nav li {
+    margin: 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+}
