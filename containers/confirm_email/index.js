@@ -1,6 +1,13 @@
 import React from 'react'
 import style from './style.module.css'
 const Confirm_Email = ({ mail_address }) => {
+        
+    const handlerEmail = () => {
+         const url = `googlegmail:///co?to=${mail_address}`;
+          window.open(url);
+    }
+    
+    
     return (
         <div className={style.wrapper}>
             <div className={style.container}>
@@ -8,7 +15,7 @@ const Confirm_Email = ({ mail_address }) => {
                 <h1 className={style.title}>Confirm your email</h1>
                 <p>Log in using the magic link sent to</p>
                 <b className={style.email}>{mail_address}</b>
-                <a href=`googlegmail:///co?to=${mail_address}` target='_blank' >Go to your email address.</a>
+                <a  onClick={()=> handlerEmail()} >Go to your email address.</a>
             </div>
         </div>
     )
