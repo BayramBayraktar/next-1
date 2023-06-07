@@ -50,7 +50,7 @@ export const Mail_Validator = async (token, mail_address) => {
              <div class="container">
              <h1>e-mail confirm</h1>
              <p>please click the link below to secure it</p>
-             <a href="${process.env.API_URL}/auth/verify/${token}">Verify account</a>
+             <a href="https://next-1-phi.vercel.app/auth/verify/${token}">Verify account</a>
              </div>
           </body>
         </html>                       
