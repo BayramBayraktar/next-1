@@ -10,7 +10,7 @@ const Token_Confirm = () => {
     useEffect(() => {
         const handlerGet = async () => {
             if (router?.query?.token) {
-                await axios.get(`api/verify/${router.query.token}`)
+                await axios.get(`/api/verify/${router.query.token}`)
                     .then((response) => {
                         if (response?.data?.success) {
                             setVisibility(response.data?.success)
