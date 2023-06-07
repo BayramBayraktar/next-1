@@ -15,29 +15,6 @@ const Header = () => {
     const { Current_User } = useSelector((state) => state.Current)
     const { isActive_login_modal } = useSelector((state) => state.Email)
 
-    useEffect(() => {
-        let lastScrollTop = 0;
-        const header = document.getElementById("header");
-
-        const handleScroll = () => {
-            const scrollTop = window.pageYOffset;
-            if (scrollTop > lastScrollTop) {
-                header.classList.remove("sticky");
-            } else {
-                header.classList.add("sticky");
-            }
-            lastScrollTop = scrollTop;
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            handleScroll()
-            window.removeEventListener("scroll", handleScroll);
-        };
-
-    }, [])
-
 
     useEffect(() => {
         if (isActive_login_modal) {
