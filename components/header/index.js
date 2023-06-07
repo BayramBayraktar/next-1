@@ -15,7 +15,7 @@ const Header = () => {
     const { Current_User } = useSelector((state) => state.Current)
     const { isActive_login_modal } = useSelector((state) => state.Email)
 
-    useEffect(() => {
+    /* useEffect(() => {
         let lastScrollTop = 0;
         const header = document.getElementById("header");
 
@@ -36,7 +36,7 @@ const Header = () => {
             window.removeEventListener("scroll", handleScroll);
         };
 
-    }, [])
+    }, []) */
 
 
     useEffect(() => {
@@ -49,7 +49,7 @@ const Header = () => {
 
 
     const handlerLogOut = async () => {
-        await axios.get(`${process.env.API_URL}/api/auth/logout`).then((response) => {
+        await axios.get(`api/auth/logout`).then((response) => {
             if (response && response.data && response.data.success) {
                 return window.location.href = "/"
             }
@@ -57,7 +57,7 @@ const Header = () => {
     }
 
     return (
-        <div id='header' className={`${style.wrapper} animate__animated animate__fadeInDown  theme`}>
+        <div id='header' className={`${style.wrapper} sticky animate__animated animate__fadeInDown  theme`}>
             <header className={style.header}>
                 <div className={style.logo}>
                     <Link href="/">
