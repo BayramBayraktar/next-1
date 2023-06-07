@@ -15,6 +15,7 @@ const Header = () => {
     const { Current_User } = useSelector((state) => state.Current)
     const { isActive_login_modal } = useSelector((state) => state.Email)
 
+<<<<<<< HEAD
     /* useEffect(() => {
         let lastScrollTop = 0;
         const header = document.getElementById("header");
@@ -38,6 +39,8 @@ const Header = () => {
 
     }, []) */
 
+=======
+>>>>>>> 6da8a24011a28ebfaefb81fd61058a8947a66643
 
     useEffect(() => {
         if (isActive_login_modal) {
