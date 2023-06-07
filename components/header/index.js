@@ -34,7 +34,7 @@ const Header = () => {
     }
 
     return (
-        <div id='header' className={`${style.wrapper} animate__animated animate__fadeInDown  theme`}>
+        <div id='header' className={`${style.wrapper} sticky animate__animated animate__fadeInDown  theme`}>
             <header className={style.header}>
                 <div className={style.logo}>
                     <Link href="/">
