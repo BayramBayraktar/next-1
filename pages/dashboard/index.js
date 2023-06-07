@@ -9,6 +9,8 @@ import Dashboard from '../../containers/dashboard'
 
 const Dashboard_Page = ({ response }) => {
   const dispatch = useDispatch()
+  
+  console.log("component")
 
   useEffect(() => {
     if (localStorage.getItem("verify")) {
@@ -36,10 +38,14 @@ const Dashboard_Page = ({ response }) => {
 export default Dashboard_Page
 
 export const getServerSideProps = async (context) => {
+  
+  console.log("sunucu")
+
+  
   const token = context.req.cookies
   const response = await isAuth(token)
-  
-  console.log(response)
+    console.log(response)
+
 
   if (response && response.success) {
     return {
