@@ -38,6 +38,8 @@ export default Dashboard_Page
 export const getServerSideProps = async (context) => {
   const token = context.req.cookies
   const response = await isAuth(token)
+  
+  console.log(response)
 
   if (response && response.success) {
     return {
@@ -46,6 +48,8 @@ export const getServerSideProps = async (context) => {
       }
     }
   } else {
+      console.log(response)
+
     return {
       redirect: {
         destination: '/',
